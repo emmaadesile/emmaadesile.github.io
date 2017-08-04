@@ -1,24 +1,33 @@
-@font-face {
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Bold.otf');
+*@font-face {
+	font-family: 'MuseoSans';
+	src: url('../fonts/MuseoSans.otf');
 }
-@font-face{
-  font-family: 'JosefinSans';
-  src: url('../fonts/JosefinSans.ttf');
+@font-face {
+  font-family: 'Hanken-Light';
+  src: url('../fonts/Hanken-Light.ttf');
+}
+body{
+  background-color: rgba(0,0,0,0.9);
+  color: #bbb;
 }
 h1, h2, h3, h4, a{
-   font-family: 'Montserrat';
+   font-family: 'Hanken-Light';
 }
 p{
-  color: #6a6a6a;
-  font-family: 'JosefinSans';
+  color: #bbb;
+  font-family: 'Hanken-Light', sans-serif;
   font-weight: normal;
-  font-size: 2.3rem;
+  font-size: 1.8rem;
 }
 a:hover{
   text-decoration: none;
  }
- .nav li{
+ .btn .btn-success {
+  background-color:  #a5a5a5;
+  border-color: #a5a5a5;
+  border-radius: 0 !important;
+ }
+/* .nav li{
    padding: 5px 15px;
  }
  .nav li a{
@@ -40,53 +49,23 @@ a:hover{
 .nav-pills{
  	font-size: 1em;
  	font-weight: bold;  
- 	padding-right: 20px;
-  }
-.pg-button{
-  background-color: rgba(0,0,0,.2);
-  border-radius: 0px;
-  border: 1px solid #06bc55;
-  padding: 10px;
-  color: #fff;
-  font-size: 1.1em;
-  font-family: 'Montserrat';
-  transition: scroll .5s ease-in-out;
-  }
-.pg-button:hover{
-  background-color: #06bc55;  
-  color: #eee;
-  border: 0px solid inherit;
-}
-.pg-button:active, 
-.pg-button:focus{
-  color: #fff !important;
-  background-color: #06bc55 !important;
-  transition: scroll .5s ease-in-out;
-  cursor: pointer;
-  border-width: 0px !important;
-}
-#about{
-  transition: scroll .5s ease-in-out;
-}
-.page-bg{
- 	background: url('../img/boxes.jpg');
- 	background-size: cover;
- 	height: 700px;
-  box-sizing: border-box;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+ 	padding-right: 20px;*/
+ }
+.btn-success{
+  background-color: #a5a5a5 !important;
+  border-radius: 0 !important;
+  border-color:  #a5a5a5 !important;
 }
 .page-headline{
-   font-size: 5.3rem !important;
+   font-size: 4.3rem !important;
    font-weight: 1000;
-   color: #fff;  
+   color: #ccc;  
  }
 .page-bg-info{
  	text-align: center;
  	color: #fff;
-  padding: 20px; 
-  padding-top: 19%;
+  /*padding: 20px; 
+  padding-top: 19%;*/
 }
 .social-media{
   margin: 0 10px;
@@ -103,7 +82,7 @@ a:hover{
   padding: 3% 1%;
 }
 .pg-line-height{
-  line-height: 3.4rem;
+  line-height: 3rem;
 }
 .footer{
   background-color: #000;
@@ -117,7 +96,7 @@ a:hover{
 .hire-me{
   background: url('../img/pc-glasses-1.jpg') no-repeat fixed;
   background-size: cover;
-  height: 400px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,4 +110,4 @@ a:hover{
 .hire-me-info h2{
   line-height: 4rem;
   font-size: 3.3rem;
-}
+}*/*/*/

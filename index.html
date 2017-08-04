@@ -5,36 +5,89 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="keyword" content="portfolio, website, web developer, web designer, software engineer">
+	<meta name="keyword" content="portfolio, landing-page, website, web developer, web designer, software engineer">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<style type="text/css">
-	
+	 body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+  }
+
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+  }
+
+  .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+  }
+
+    .sidenav a:hover, .offcanvas a:focus{
+      color: #f1f1f1;
+    }
+
+  .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+  }
+
+  #main {
+      transition: margin-left .5s;
+      padding: 16px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 	</style>
 </head>
 <body>
     <!--Nagivation Menu-->
-    <ul class="nav nav-bar nav-pills pull-right" role="navigation">
-	   <li><a href="#">Home</a></li>
-	   <li><a href="#about">About</a></li>
-	   <li><a href="#contact">Contact</a></li>	    	  
-	   <li><a href="https://medium.com/emma_adesile" target="_blank">Blog</a></li>
-	 </ul>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="https://www.medium.com/emmaadesile">Blog</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
+    
+
 	 
-   <!--Page BAckground-->
-    <div class="page-bg">
-     <div class="container">
+   <!--Page Background-->
+   <img src="img/manny.jpg" class="img-responsive center" style="width: 180px; height: auto; border-radius: 180px; margin: auto;" />
+
      <div class="page-bg-info">
 
      <!--headline-->
      <h1 class="page-headline">Hi, I'm Manny and I'm a <br> Full Stack Developer</h1>
-     <a href="#about" type="button" class="btn btn-success pg-button" id="learn-more">LEARN MORE</a>
      </div>
-     </div>
-    </div>
+  
  
   <div class="container">
   	<div class="row pg-padding" id="about">
+
   	  <!--About Me-->
   	  <div class="col-lg-10 col-lg-offset-2 col-lg-pull-1 col-md-12 col-sm-12 col-xs-12">
   	  	<h2 class="" style="color: #06bc55">About Me</h2>
@@ -51,21 +104,20 @@
   	<!--My Services-->
   	<div class="row" id="projects" style="margin-bottom: 3%;">
   	  <div class="col-lg-10 col-lg-offset-2 col-lg-pull-1 col-md-12 col-sm-12 col-xs-12">
-  	  	<h2 style="color: #06bc55" class="text-left">My Services</h2>
+  	  	<h2 style="color: #06bc55" class="text-left" id="services">My Services</h2>
   	  	<p class="me"></p>
   	  	<div class="row">
   	  	  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 		    <h4>CREATIVITY</h4>
-		    <p>The core of every successful product is a function of a creative process which blends the latest technology to craft an intuitive design and development that cater to your needs. </p>
+		    <p class="pg-line-height">The core of every successful product is a function of a creative process which blends the latest technology to craft an intuitive design and development that cater to your needs. </p>
   	  	  </div>
   	  	  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
   	  	  <h4>RESEARCH</h4>
-  	  	  	<p>I'm an avid researcher. I keep abreast with industry trends and make sure work around the best way to tackle a problem in the shortest time possible.</p>
+  	  	  	<p class="pg-line-height">I'm an avid researcher. I am abreast with industry trends and make sure to work around the best way to tackle a problem in the shortest time possible.</p>
   	  	  </div>
   	  	  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
   	  	  	<h4>CODE</h4>
-  	  	  	<p>My skillset includes - HTML5, CSS3, Bootstrap, JavaScript, jQuery, AngularJS, Ruby on Rails, MongoDb, PHP.
-  	  	  	Tools of my workflow: Git, Github, Agile Methodologies.</p>
+  	  	  	<p class="pg-line-height">The bulk of my skillset revolves around HTML5, CSS3, Javascript and Nodejs. I develop fully fleshed out web applications that are responsive, secure and neatly crafted</p>
   	  	  </div><hr> 	
   	  	</div>
   	  </div>
@@ -75,7 +127,7 @@
   <!--Hire me-->
   <div class="hire-me">
     <div class="text-center hire-me-info">
-      <h2>Are you looking for a developer that knows his craft?<br> I work remotely and I'm available for hire.</h2>
+      <h2>I work remotely and I'm available for hire.</h2>
   	<a href="mailto:silexm01@gmail.com" type="button" class="btn btn-success pg-button" id="contact">CONTACT ME</a>	
     </div>  	
   </div>
@@ -83,7 +135,7 @@
   <footer class="text-center footer">
     <!--Social Media Icons-->
      <div class="btnList"> 
-       <a href="https://twitter.com/techymanny" target="_blank"  class="social-media">
+       <a href="https://twitter.com/emma_adesile" target="_blank"  class="social-media">
         <svg version="1.1" id="Layer_1" class="twitter-icon"
 	    xmlns="httkp://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		width="24px" height="24px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
@@ -116,22 +168,13 @@
 	   c0.6-1.2,2.2-2.5,4.5-2.5c4.8,0,5.7,3.2,5.7,7.3V27.3z"/>
       </svg>
      </a>
-     <a href="https://www.instagram.com/mannydevcode" target="_blank" id="instagram-icon" class="social-media">
-       <svg version="1.1" id="Layer_1" 
-       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	   width="24px" height="24px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-       <path fill="#06bc55" d="M28.2,0H3.8C1.7,0,0,1.7,0,3.8v24.4C0,30.3,1.7,32,3.8,32h24.4c2.1,0,3.8-1.7,3.8-3.8V3.8
-	   C32,1.7,30.3,0,28.2,0z M24,4h3c0.6,0,1,0.4,1,1v3c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V5C23,4.4,23.4,4,24,4z M16,9.9
-	   c3.4,0,6.2,2.7,6.2,6.1c0,3.4-2.8,6.1-6.2,6.1c-3.4,0-6.2-2.7-6.2-6.1C9.9,12.6,12.6,9.9,16,9.9z M28,29H4c-0.6,0-1-0.4-1-1V13h4
-	   c-0.5,0.8-0.7,2.1-0.7,3c0,5.4,4.4,9.7,9.7,9.7c5.4,0,9.7-4.4,9.7-9.7c0-0.9-0.1-2.3-0.8-3h4v15C29,28.6,28.6,29,28,29z"/>
-       </svg>
-     </a>
+   
      </div>
   	<p style="font-size: 1em">Copyright &copy; 2017 Adesile Emmanuel | All Rights reserved.</p>
   </footer>
-
-  <script type="text/javascript">
-
+  <script type="text/javascript" src="js/main.js">
+ 
   </script>
+
 </body>
 </html>
